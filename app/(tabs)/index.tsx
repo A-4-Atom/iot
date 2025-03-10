@@ -9,7 +9,6 @@ import {
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useGlobalContext } from "@/context/GlobalProvider";
-import * as Progress from "react-native-progress";
 import Card from "@/components/Card";
 
 export default function HomeScreen() {
