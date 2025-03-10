@@ -6,11 +6,13 @@ import {
   ScrollView,
   View,
 } from "react-native";
+
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useGlobalContext } from "@/context/GlobalProvider";
 import * as Progress from "react-native-progress";
 import Card from "@/components/Card";
+import Status from "@/components/Status/Status";
 
 export default function HomeScreen() {
   const { name } = useGlobalContext();
@@ -31,10 +33,11 @@ export default function HomeScreen() {
             <Card />
           </View>
           {/* Another View>Card for EC Level and Temperature */}
-
-
-        {/* Create a Status Component inside components folder, photo whatsapp pe hogi */}
-        
+          <View className="flex flex-row justify-between items-center my-4 w-full">
+            <Card />
+            <Card />
+          </View>
+          <Status />
         </View>
       </ScrollView>
       <StatusBar backgroundColor="#161622" style="light" />
